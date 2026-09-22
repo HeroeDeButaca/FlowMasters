@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4137919054978127859}
   - component: {fileID: 8644739988699217281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle_feedback
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 8632278017610186153}
   - component: {fileID: 3694767347613809831}
   - component: {fileID: 7225423184715455434}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Node
   m_TagString: Estimulo
   m_Icon: {fileID: 0}
@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9132812774111379744}
   - component: {fileID: 2531808754023310605}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: NodeSprite
   m_TagString: Estimulo
   m_Icon: {fileID: 0}

@@ -97,6 +97,7 @@ public class TimesOutManager : MonoBehaviour
 
     private void ReturnToMenu()
     {
+        _returnMenuButton.interactable = false;
         AudioManager.Instance.StopBGM();
         StartCoroutine(ReturnToMenuCo());
     }

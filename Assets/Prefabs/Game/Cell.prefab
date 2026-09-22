@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8569813974700814129}
   - component: {fileID: 8863472358424117935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BackgroundChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5529717752228989037}
   - component: {fileID: 3818565654063038020}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Collider
   m_TagString: Estimulo
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5227338637357688713}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cell
   m_TagString: Estimulo
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8515376276741070264}
   - component: {fileID: 8957261603936020603}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CellSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 8331670962212984330}
   - component: {fileID: 8884133341198026954}
   - component: {fileID: 5008284627926933407}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LoadingSpr
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4767517303026096617}
   - component: {fileID: 1112889320606028328}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LineNodeRenderer
   m_TagString: LineDraw
   m_Icon: {fileID: 0}

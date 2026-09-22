@@ -37,6 +37,11 @@ public class OptionsManager : MonoBehaviour
     [SerializeField]
     private TMP_Dropdown _languageDropdown;
 
+    [SerializeField]
+    private GameObject _fullscreenLabel;
+    [SerializeField]
+    private GameObject _showFileBtn;
+
     private ConfigData _configData;
     private string _saveDataFolder = "";
     private readonly string CONFIG_FILE_NAME = "config.json";
@@ -54,7 +59,16 @@ public class OptionsManager : MonoBehaviour
 
         if(File.Exists(path))
         {
-            _configData = JsonCreator.LoadData<ConfigData>(path);
+            try
+            {
+                _configData = JsonCreator.LoadData<ConfigData>(path);
+            }
+            catch(System.Exception e)
+            {
+                Debug.LogError(e);
+                _configData = new ConfigData();
+                JsonCreator.SaveData(_configData, _saveDataFolder, CONFIG_FILE_NAME);
+            }
         }
         else
         {
@@ -64,6 +78,10 @@ public class OptionsManager : MonoBehaviour
 
         _optionsPanel.SetVisible(false);
         InitializeConfig();
+
+#if PLATFORM_ANDROID
+        HideAndroidSettings();
+#endif
     }
 
     private void InitializeConfig()
@@ -76,9 +94,9 @@ public class OptionsManager : MonoBehaviour
         ConfigureLanguageDropdown();
 
         bool isFullscreen = _configData.IsFullscreen;
-        float musicVolume = _configData.MusicVolume;
-        float sfxVolume = _configData.SfxVolume;
-        int languageSelected = _configData.LanguageSelected;
+        float musicVolume = Mathf.Clamp01(_configData.MusicVolume);
+        float sfxVolume = Mathf.Clamp01(_configData.SfxVolume);
+        int languageSelected = Mathf.Clamp(_configData.LanguageSelected, 0, (_languageDropdown.options.Count-1));
 
         _fullscreenToggle.isOn = isFullscreen;
         _musicSlider.value = musicVolume;
@@ -159,5 +177,12 @@ public class OptionsManager : MonoBehaviour
 
         // Seteamos el nombre de las opciones en el dropdown
         _languageDropdown.AddOptions(languagesNames.ToList());
+    }
+
+    private void HideAndroidSettings()
+    {
+        _fullscreenToggle.gameObject.SetActive(false);
+        _fullscreenLabel.SetActive(false);
+        _showFileBtn.SetActive(false);
     }
 }

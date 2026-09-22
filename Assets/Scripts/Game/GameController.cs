@@ -71,6 +71,7 @@ public class GameController : MonoBehaviour
 
         _maxTime = mode.TotalTime;
         _currentTime = _maxTime;
+        _timeText.text = _currentTime.ToString("0");
 
         BoardGenerator.Instance.GenerateBoard(width, height, _maxNodes);
     }
