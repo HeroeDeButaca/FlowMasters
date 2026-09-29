@@ -16,6 +16,8 @@ public class PlayerData : MonoBehaviour
 
     [SerializeField]
     private CanvasGroup _userCreationGroup;
+    [SerializeField]
+    private CanvasGroup _mainMenuGroup;
 
     public static PlayerData Instance;
 
@@ -44,10 +46,13 @@ public class PlayerData : MonoBehaviour
 
             PlayerInfoManager.Instance.ChangeIcon(iconSprite);
             PlayerInfoManager.Instance.ChangeName(_data.PlayerName);
+
+            _mainMenuGroup.SetVisible(true);
         }
         else
         {
-            _userCreationGroup?.SetVisible(true);
+            _mainMenuGroup.SetVisible(false);
+            _userCreationGroup.SetVisible(true);
         }
     }
 
@@ -78,6 +83,7 @@ public class PlayerData : MonoBehaviour
         yield return StartCoroutine(SavePlayerDataCo());
 
         _userCreationGroup.SetVisible(false);
+        _mainMenuGroup.SetVisible(true);
         IconManager.Instance.InitializeIcons();
     }
 

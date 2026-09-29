@@ -21,6 +21,10 @@ public class TouchDetector : MonoBehaviour
     private GameObject _prefabLineRenderer;
 
     [SerializeField]
+    [Tooltip("Camera que renderiza el tablero")]
+    private Camera _boardCamera;
+
+    [SerializeField]
     [Tooltip("Padre del tablero")]
     private Transform _fatherBoard;
 
@@ -234,7 +238,7 @@ public class TouchDetector : MonoBehaviour
     /// <returns>La celda tocada en forma de GameObject</returns>
     private GameObject GetMouseGameObjectCell()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos = _boardCamera.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D[] hits = Physics2D.RaycastAll(mousePos, Vector2.zero);
         Collider2D topCollider = null;
 

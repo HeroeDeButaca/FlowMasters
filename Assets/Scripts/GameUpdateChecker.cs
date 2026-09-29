@@ -1,25 +1,23 @@
 using Proyecto26;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Events;
 using System.Globalization;
 
 public class GameUpdateChecker : MonoBehaviour
 {
+    [SerializeField]
+    private CanvasGroup _menuPanel;
     [SerializeField]
     private CanvasGroup _versionAvailablePanel;
     [SerializeField]
     private CanvasGroup _noInternetPanel;
 
     [SerializeField]
-    private Sprite connectionSpr;
+    private Sprite _connectionSpr;
     [SerializeField]
-    private Sprite noConnectionSpr;
+    private Sprite _noConnectionSpr;
     [SerializeField]
-    private Image connectionImage;
-
-    [SerializeField]
-    public UnityEvent InitializeConnectionThings;
+    private Image _connectionImage;
 
     public static GameUpdateChecker Instance;
 
@@ -32,14 +30,20 @@ public class GameUpdateChecker : MonoBehaviour
             if (failedConnection)
             {
                 _noInternetPanel.SetVisible(true);
+                _connectionImage.sprite = _noConnectionSpr;
                 return;
             }
 
-            if (isUpdated)
-                InitializeConnectionThings?.Invoke();
-            else
+            if (!isUpdated)
+            {
+                _connectionImage.sprite = _noConnectionSpr;
                 _versionAvailablePanel.SetVisible(true);
-
+            }
+            else
+            {
+                LeaderboardController.Instance.LoadAllScores();
+                _menuPanel.SetVisible(true);
+            }
         });
     }
 

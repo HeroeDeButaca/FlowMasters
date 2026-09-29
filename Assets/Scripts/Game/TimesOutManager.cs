@@ -31,10 +31,6 @@ public class TimesOutManager : MonoBehaviour
     void Start()
     {
         _returnMenuButton.onClick.AddListener(ReturnToMenu);
-
-        if (PlayerPrefs.GetInt("IsOffline") == 0)
-            _returnMenuButton.interactable = false;
-
         _timesOutPanel.SetVisible(false);
     }
 
@@ -46,8 +42,10 @@ public class TimesOutManager : MonoBehaviour
         completedText = completedText.Replace("x", completedBoards.ToString("0"));
         _completedBoardsText.text = completedText;
 
-        if(PlayerPrefs.GetInt("IsOffline") == 0)
+        if (PlayerPrefs.GetInt("IsOffline") == 0)
             PostPoints(completedBoards);
+        else
+            _returnMenuButton.interactable = true;
 
     }
 

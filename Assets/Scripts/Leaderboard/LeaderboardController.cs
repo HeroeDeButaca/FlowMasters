@@ -55,10 +55,12 @@ public class LeaderboardController : MonoBehaviour
             _scoreBoxes[i] = _contentLeaderboard.GetChild(i).GetComponent<LeaderboardBox>();
 
         _leaderboardData = new LeaderboardData[TOTAL_GAMEMODES, TOP_SHOW];
+    }
 
-        for(int i = 0; i < TOTAL_GAMEMODES; i++)
+    public void LoadAllScores()
+    {
+        for (int i = 0; i < TOTAL_GAMEMODES; i++)
             RetrieveFromDatabase(i);
-
     }
 
     private void RetrieveFromDatabase(int modeId)
@@ -88,6 +90,10 @@ public class LeaderboardController : MonoBehaviour
                 //Debug.Log($"{i + 1}. {data.PlayerName} - {data.TotalPoints}");
                 _leaderboardData[modeId, i] = data;
             }
+        })
+        .Catch(err =>
+        {
+            Debug.LogError(err);
         });
     }
 

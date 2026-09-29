@@ -96,6 +96,10 @@ public class BoardGenerator : MonoBehaviour
     public Grid GridBoard;
 
     [SerializeField]
+    [Tooltip("Camara a ajustar posición")]
+    private Camera _boardCamera;
+
+    [SerializeField]
     [Tooltip("Padre del tablero")]
     private Transform _fatherBoard;
 
@@ -179,11 +183,11 @@ public class BoardGenerator : MonoBehaviour
     /// </summary>
     private void SetCameraToCenter()
     {
-        Camera.main.transform.position = GetCameraCenter();
+        _boardCamera.transform.position = GetCameraCenter();
 
         float maxValue = Mathf.Max(GridBoard.Width, GridBoard.Height);
 
-        Camera.main.orthographicSize = 0.5f * maxValue + 0.6f;
+        _boardCamera.orthographicSize = 0.5f * maxValue + 0.6f;
     }
 
     private Vector3 GetCameraCenter()

@@ -63,6 +63,10 @@ MonoBehaviour:
     m_Key: Menu.ModeDetails.Nodes
     m_Metadata:
       m_Items: []
+  - m_Id: 43801964723060736
+    m_Key: "Menu.ModeDetails.Play\t"
+    m_Metadata:
+      m_Items: []
   - m_Id: 11526761293037568
     m_Key: Menu.Version.VersionAvailable
     m_Metadata:
