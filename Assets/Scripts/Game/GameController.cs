@@ -23,6 +23,9 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private AudioClip[] _bgmMusics;
 
+    [SerializeField]
+    private CanvasGroup _leaveGamePanel;
+
     public static GameController Instance;
 
     void Awake()
@@ -37,6 +40,7 @@ public class GameController : MonoBehaviour
             _gameState = GameState.InGame;
         });
 
+        _leaveGamePanel.SetVisible(false);
         TouchDetector.Instance.OnTableFilled.AddListener(TableFilled);
 
         SetGame();
@@ -56,6 +60,7 @@ public class GameController : MonoBehaviour
                 TouchDetector.Instance.CanTouch = false;
                 _gameState = GameState.Finished;
                 _timeText.text = "0";
+                _leaveGamePanel.SetVisible(false);
                 TimesOutManager.Instance.ShowPanel(_completedBoards);
             }
 
@@ -90,5 +95,10 @@ public class GameController : MonoBehaviour
     {
         int randMusic = Random.Range(0, _bgmMusics.Length);
         AudioManager.Instance.PlayBGM(_bgmMusics[randMusic], true);
+    }
+
+    public void ReturnToMenu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
