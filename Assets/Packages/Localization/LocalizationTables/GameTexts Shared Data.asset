@@ -27,6 +27,22 @@ MonoBehaviour:
     m_Key: Game.TimesOut.ReturnMenuButton
     m_Metadata:
       m_Items: []
+  - m_Id: 34373331872923648
+    m_Key: LeaveGame.Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373401934577664
+    m_Key: LeaveGame.Advice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373507312271360
+    m_Key: LeaveGame.Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373564543549440
+    m_Key: LeaveGame.KeepPlaying
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

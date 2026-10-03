@@ -30,6 +30,22 @@ MonoBehaviour:
     m_Localized: "Volver al man\xFA"
     m_Metadata:
       m_Items: []
+  - m_Id: 34373564543549440
+    m_Localized: Seguir jugando
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373507312271360
+    m_Localized: "Volver al men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373331872923648
+    m_Localized: Salir de la partida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373401934577664
+    m_Localized: "El progreso no ser\xE1 guardado ni publicado en la tabla de clasificaci\xF3n"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

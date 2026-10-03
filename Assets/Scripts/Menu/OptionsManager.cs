@@ -62,6 +62,7 @@ public class OptionsManager : MonoBehaviour
             try
             {
                 _configData = JsonCreator.LoadData<ConfigData>(path);
+                Debug.Log($"MusicVolume: {_configData.MusicVolume}");
             }
             catch(System.Exception e)
             {

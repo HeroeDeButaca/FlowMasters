@@ -30,6 +30,22 @@ MonoBehaviour:
     m_Localized: "Tornar al men\xFA"
     m_Metadata:
       m_Items: []
+  - m_Id: 34373331872923648
+    m_Localized: Sortir de la partida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373401934577664
+    m_Localized: "El teu progr\xE9s no es desar\xE0 ni es publicar\xE0 a la classificaci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373507312271360
+    m_Localized: "Tornar al men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373564543549440
+    m_Localized: Continua jugant
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

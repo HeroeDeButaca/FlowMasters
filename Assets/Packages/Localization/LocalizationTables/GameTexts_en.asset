@@ -30,6 +30,22 @@ MonoBehaviour:
     m_Localized: Return to menu
     m_Metadata:
       m_Items: []
+  - m_Id: 34373331872923648
+    m_Localized: Leave the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373401934577664
+    m_Localized: The progress will not be saved and published to the Leaderboard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373507312271360
+    m_Localized: Return to menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34373564543549440
+    m_Localized: Keep playing
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

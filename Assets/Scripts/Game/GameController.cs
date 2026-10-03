@@ -99,6 +99,8 @@ public class GameController : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        Destroy(PlayerData.Instance.gameObject);
+        AudioManager.Instance.StopBGM();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
