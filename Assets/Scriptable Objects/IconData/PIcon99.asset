@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d2144cb0ecc1a4a9bc223401a03a33, type: 3}
-  m_Name: PIcon00
+  m_Name: PIcon99
   m_EditorClassIdentifier: Assembly-CSharp::IconData
-  IconId: 0
-  IconSprite: {fileID: 21300000, guid: 27bc9bdf8bbabe94ca855cbe0e7ef306, type: 3}
-  IsLocked: 0
+  IconId: 99
+  IconSprite: {fileID: 21300000, guid: ddd23af416f39e842a28a8e53be1e793, type: 3}
+  IsLocked: 1
   RequerimentLocale:
     m_TableReference:
       m_TableCollectionName: GUID:86e577fcfb66d9c4ab3895053af9f7a1
     m_TableEntryReference:
-      m_KeyId: 47043601175691264
+      m_KeyId: 47055560294023168
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  IsSecret: 0
-  IsVisible: 1
+  IsSecret: 1
+  IsVisible: 0
   references:
     version: 2
     RefIds: []

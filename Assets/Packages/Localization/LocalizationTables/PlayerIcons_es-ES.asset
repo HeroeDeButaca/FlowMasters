@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 106013892608
-    m_Localized: Juega una partida
+    m_Localized: Juega 10 partidas
     m_Metadata:
       m_Items: []
   - m_Id: 337531114332160
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6566396457140224
-    m_Localized: Que se haga el silencio
+    m_Localized: "\xA1Que se haga el silencio!"
     m_Metadata:
       m_Items: []
   - m_Id: 13820836868276224
@@ -44,6 +44,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13821571097968640
     m_Localized: "Pon el juego en Catal\xE1n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47043601175691264
+    m_Localized: Icono inicial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47049084263481344
+    m_Localized: "\xA1Queda en primer lugar!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47049117515923456
+    m_Localized: Juega 25 partidas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47055268391436288
+    m_Localized: No seas el mejor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47055560294023168
+    m_Localized: Si tienes este icono eres un bot
     m_Metadata:
       m_Items: []
   references:

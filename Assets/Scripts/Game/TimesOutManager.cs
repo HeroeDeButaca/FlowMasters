@@ -75,6 +75,7 @@ public class TimesOutManager : MonoBehaviour
             if (data.TotalPoints < score)
                 data.TotalPoints = score;
 
+            PlayerPrefs.SetInt("LastScore", score);
             data.PlayerName = playerName;
             data.ModeId = modeId;
             data.IconId = iconId;

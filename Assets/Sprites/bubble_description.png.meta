@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9a531b0d31b782d4ba8ac94bd8cccaab
+guid: 2ab0e8d4b45e4bc4aaf1a45a4599ff8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5122626539182523720
-    second: cerradura_0
+      213: 8877277609487871957
+    second: bubble_description_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cerradura_0
+      name: bubble_description_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 512
-        height: 512
+        height: 310
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84586f052b9371740800000000000000
-      internalID: 5122626539182523720
+      spriteID: 5dfad06b3fc623b70800000000000000
+      internalID: 8877277609487871957
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cerradura_0: 5122626539182523720
+      bubble_description_0: 8877277609487871957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

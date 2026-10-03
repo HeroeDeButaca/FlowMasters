@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Localization;
 using TMPro;
-using System.Collections.Generic;
+using UnityEngine.Localization.Components;
 
 public class IconManager : MonoBehaviour
 {
@@ -31,14 +31,14 @@ public class IconManager : MonoBehaviour
 
     public void InitializeIcons()
     {
-        IconUnlocked[] playerIconsUnlocked = PlayerData.Instance.UserData.IconsUnlocked.ToArray(); 
+        IconUnlocked[] playerIconsUnlocked = PlayerData.Instance.UserData.IconsUnlocked.ToArray();
 
         for(int i = 0; i < _iconsData.Length; i++)
         {
             IconData iconData = _iconsData[i];
             bool iconUnlocked = playerIconsUnlocked[i].Unlocked;
 
-            if (!iconData.IsVisible)
+            if (!iconData.IsVisible && !iconUnlocked)
                 continue;
 
             GameObject iconGO = Instantiate(_prefabIcon, _contentIcons);
@@ -54,11 +54,16 @@ public class IconManager : MonoBehaviour
             iconGO.transform.GetChild(1).gameObject.SetActive(iconData.IsLocked && !iconUnlocked);
             iconGO.transform.GetChild(2).gameObject.SetActive(iconData.IsSecret && !iconUnlocked);
 
+            LocalizedReference obtentionReference = iconData.RequerimentLocale;
+            LocalizeStringEvent obtentionDescText = iconGO.transform.GetChild(3).GetComponentInChildren<LocalizeStringEvent>();
+            obtentionDescText.StringReference.SetReference(obtentionReference.TableReference, obtentionReference.TableEntryReference);
+
             if (iconUnlocked)
                 _totalIconsUnlocked++;
         }
 
-        _totalIconsUnlockedText.text = $"{_totalIconsUnlocked} / {_iconsData.Length}";
+        // El PIcon99 no debe contarse, por eso el "-1"
+        _totalIconsUnlockedText.text = $"{_totalIconsUnlocked} / {_iconsData.Length-1}";
     }
 
     public void ResetIconsPanel()

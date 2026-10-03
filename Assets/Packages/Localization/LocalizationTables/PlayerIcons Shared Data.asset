@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: PIconUI.PIconsUnlocked
     m_Metadata:
       m_Items: []
+  - m_Id: 47043601175691264
+    m_Key: PIconDesc.PIcon00
+    m_Metadata:
+      m_Items: []
   - m_Id: 106013892608
     m_Key: PIconDesc.PIcon01
     m_Metadata:
@@ -41,6 +45,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13820836868276224
     m_Key: PIconDesc.PIcon06
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47049084263481344
+    m_Key: PIconDesc.PIcon07
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47049117515923456
+    m_Key: PIconDesc.PIcon08
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47055268391436288
+    m_Key: PIconDesc.PIcon09
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47055560294023168
+    m_Key: PIconDesc.PIcon99
     m_Metadata:
       m_Items: []
   m_Metadata:

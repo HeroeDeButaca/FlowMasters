@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9a531b0d31b782d4ba8ac94bd8cccaab
+guid: 31f533d1561a7654aa2ef9db03c51630
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5122626539182523720
-    second: cerradura_0
+      213: 3624890440778586807
+    second: PIcon_04_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,7 +98,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cerradura_0
+      name: PIcon_04_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84586f052b9371740800000000000000
-      internalID: 5122626539182523720
+      spriteID: 7ba115086a23e4230800000000000000
+      internalID: 3624890440778586807
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cerradura_0: 5122626539182523720
+      PIcon_04_0: 3624890440778586807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

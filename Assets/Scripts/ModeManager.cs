@@ -109,6 +109,8 @@ public class ModeManager : MonoBehaviour
 
         if (PlayerData.Instance.UserData.GamesPlayed >= 10)
             IconUnlocker.Instance.UnlockIcon(1);
+        else if (PlayerData.Instance.UserData.GamesPlayed >= 25)
+            IconUnlocker.Instance.UnlockIcon(8);
 
         PlayerData.Instance.SelectedMode = mode;
         SceneManager.LoadScene(1);

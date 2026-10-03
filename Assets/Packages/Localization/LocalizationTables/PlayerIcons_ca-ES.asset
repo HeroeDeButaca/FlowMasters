@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 106013892608
-    m_Localized: Juga una partida
+    m_Localized: Juga 10 partides
     m_Metadata:
       m_Items: []
   - m_Id: 337531114332160
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6566396457140224
-    m_Localized: Que es faci el silenci
+    m_Localized: Que es faci el silenci!
     m_Metadata:
       m_Items: []
   - m_Id: 13820836868276224
@@ -44,6 +44,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 13821571097968640
     m_Localized: "Posa el joc en Catal\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47043601175691264
+    m_Localized: Icona inicial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47049084263481344
+    m_Localized: "Sigues el n\xFAmero 1!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47049117515923456
+    m_Localized: Juga 25 partides
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47055268391436288
+    m_Localized: No siguis el millor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47055560294023168
+    m_Localized: Si tens aquest icona ets un bot
     m_Metadata:
       m_Items: []
   references:
