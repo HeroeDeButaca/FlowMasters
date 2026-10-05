@@ -104,6 +104,8 @@ public class TouchDetector : MonoBehaviour
                             _actualNode = nodes[i];
                         }
                     }
+
+                    _actualNode.AnimPairs();
                 }
                 else if (IsThereNode(clickedGO, out _actualNode)) // Crea un nuevo LineRenderer
                 {
@@ -119,6 +121,8 @@ public class TouchDetector : MonoBehaviour
                         _actualNode.IsCorrectPath = false;
                         _actualNode.NodePair.IsCorrectPath = false;
                     }
+
+                    _actualNode.AnimPairs();
 
                     _activeLineRenderer = Instantiate(_prefabLineRenderer, Vector3.zero,
                         Quaternion.identity, _fatherBoard).GetComponent<LineRenderer>();

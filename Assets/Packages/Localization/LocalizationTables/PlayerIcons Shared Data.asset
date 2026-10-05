@@ -59,8 +59,16 @@ MonoBehaviour:
     m_Key: PIconDesc.PIcon09
     m_Metadata:
       m_Items: []
+  - m_Id: 47137924898635776
+    m_Key: PIconDesc.PIcon10
+    m_Metadata:
+      m_Items: []
   - m_Id: 47055560294023168
     m_Key: PIconDesc.PIcon99
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47138769119756288
+    m_Key: PIconDesc.Secret
     m_Metadata:
       m_Items: []
   m_Metadata:

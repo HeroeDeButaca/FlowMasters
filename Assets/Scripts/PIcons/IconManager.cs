@@ -19,6 +19,9 @@ public class IconManager : MonoBehaviour
     [SerializeField]
     private TMP_Text _totalIconsUnlockedText;
 
+    [SerializeField]
+    private LocalizedString _secretDescription;
+
     private int _totalIconsUnlocked = 0;
 
     public static IconManager Instance;
@@ -54,7 +57,12 @@ public class IconManager : MonoBehaviour
             iconGO.transform.GetChild(1).gameObject.SetActive(iconData.IsLocked && !iconUnlocked);
             iconGO.transform.GetChild(2).gameObject.SetActive(iconData.IsSecret && !iconUnlocked);
 
-            LocalizedReference obtentionReference = iconData.RequerimentLocale;
+            LocalizedReference obtentionReference = null;
+            if (!iconUnlocked && iconData.IsSecret)
+                obtentionReference = _secretDescription;
+            else
+                obtentionReference = iconData.RequerimentLocale;
+
             LocalizeStringEvent obtentionDescText = iconGO.transform.GetChild(3).GetComponentInChildren<LocalizeStringEvent>();
             obtentionDescText.StringReference.SetReference(obtentionReference.TableReference, obtentionReference.TableEntryReference);
 

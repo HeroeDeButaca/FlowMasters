@@ -89,6 +89,12 @@ public class Node
 
         NodeAnim.SetBool("connected", false);
     }
+
+    public void AnimPairs()
+    {
+        NodeAnim.SetTrigger("size");
+        NodePair.NodeAnim.SetTrigger("size");
+    }
 }
 
 public class BoardGenerator : MonoBehaviour
