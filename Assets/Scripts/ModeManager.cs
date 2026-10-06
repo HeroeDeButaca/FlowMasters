@@ -48,12 +48,16 @@ public class ModeManager : MonoBehaviour
     [SerializeField]
     private Button _playButton;
 
+    [SerializeField]
+    private AudioClip _menuMusic;
+
     [Header("Other")]
     [SerializeField]
     private GameObject _instructionsGO;
 
     void Start()
     {
+        AudioManager.Instance.PlayBGM(_menuMusic, true);
         SetButtonModes();
         _instructionsGO.SetActive(true);
     }
@@ -113,6 +117,7 @@ public class ModeManager : MonoBehaviour
             IconUnlocker.Instance.UnlockIcon(8);
 
         PlayerData.Instance.SelectedMode = mode;
+        AudioManager.Instance.StopBGM();
         SceneManager.LoadScene(1);
     }
 

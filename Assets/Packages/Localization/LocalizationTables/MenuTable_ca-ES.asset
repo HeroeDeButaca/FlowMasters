@@ -140,6 +140,22 @@ MonoBehaviour:
     m_Localized: Jugar
     m_Metadata:
       m_Items: []
+  - m_Id: 47842684488400896
+    m_Localized: Benvolgut a Flow Masters!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842774506553344
+    m_Localized: Posa un nom d'usuari
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842806102245376
+    m_Localized: "El nom no es pot canviar despr\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47844922841645056
+    m_Localized: Si us plau, no utilitzeu paraulotes
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

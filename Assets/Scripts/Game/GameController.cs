@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private TMP_Text _timeText;
 
+    private bool _tickingTimeStarted = false;
+    [SerializeField]
+    private AudioClip _tickingSfx;
+
     private int _maxNodes;
 
     private int _completedBoards;
@@ -54,9 +58,15 @@ public class GameController : MonoBehaviour
         {
             _currentTime -= Time.deltaTime;
             _timeText.text = _currentTime.ToString("0");
-
-            if (_currentTime <= 0f)
+            if(_currentTime <= 10f && !_tickingTimeStarted)
             {
+                _tickingTimeStarted = true;
+                AudioManager.Instance.PlaySFX(_tickingSfx);
+                _timeText.GetComponent<Animator>().SetBool("ticking", true);
+            }
+            else if (_currentTime <= 0f)
+            {
+                _timeText.GetComponent<Animator>().SetBool("ticking", false);
                 TouchDetector.Instance.CanTouch = false;
                 _gameState = GameState.Finished;
                 _timeText.text = "0";

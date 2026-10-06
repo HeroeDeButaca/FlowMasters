@@ -87,7 +87,6 @@ public class IconManager : MonoBehaviour
 
     public void CheckListBoolData()
     {
-        Debug.Log($"PlayerName: {PlayerData.Instance.UserData.PlayerName}");
         int dataListLength = PlayerData.Instance.UserData.IconsUnlocked.Count;
 
         if (dataListLength < _iconsData.Length)

@@ -135,6 +135,22 @@ MonoBehaviour:
     m_Key: Menu.DeleteDataAdvice.Info
     m_Metadata:
       m_Items: []
+  - m_Id: 47842684488400896
+    m_Key: Menu.CreateUser.Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842774506553344
+    m_Key: Menu.CreateUser.SetUsername
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842806102245376
+    m_Key: Menu.CreateUser.Advice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47844922841645056
+    m_Key: Menu.CreateUser.ProfanityAdvice
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

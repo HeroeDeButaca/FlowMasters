@@ -71,7 +71,6 @@ public class PlayerData : MonoBehaviour
         ProfanityFilter profanityFilter = new();
         string username = usernameInput.text;
         bool isNameAllowed = profanityFilter.IsNameAllowed(username);
-        Debug.Log($"Nombre permitido: {isNameAllowed}");
 
         if (isNameAllowed)
         {

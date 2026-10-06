@@ -35,8 +35,6 @@ public class ProfanityFilter
 
             _badWords.Add(word);
         }
-
-        Debug.Log($"Filtro de insultos cargado: {_badWords.Count} palabras.");
     }
 
     public bool IsNameAllowed(string name)

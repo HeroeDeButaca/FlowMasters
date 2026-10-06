@@ -142,6 +142,22 @@ MonoBehaviour:
     m_Localized: Play
     m_Metadata:
       m_Items: []
+  - m_Id: 47842806102245376
+    m_Localized: The username cannot be changed later
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842774506553344
+    m_Localized: Set a username
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842684488400896
+    m_Localized: Welcome to Flow Masters!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47844922841645056
+    m_Localized: Please do not use profanity
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

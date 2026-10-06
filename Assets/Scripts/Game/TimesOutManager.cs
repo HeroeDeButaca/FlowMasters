@@ -36,6 +36,7 @@ public class TimesOutManager : MonoBehaviour
 
     public void ShowPanel(int completedBoards)
     {
+        _returnMenuButton.interactable = false;
         _timesOutPanel.SetVisible(true);
 
         string completedText = _completedBoardsTraduction.GetLocalizedString();

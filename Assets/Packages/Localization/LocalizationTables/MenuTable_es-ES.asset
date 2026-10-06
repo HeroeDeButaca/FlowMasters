@@ -140,6 +140,22 @@ MonoBehaviour:
     m_Localized: Jugar
     m_Metadata:
       m_Items: []
+  - m_Id: 47842684488400896
+    m_Localized: "\xA1Bienvenido a Flow Masters!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842774506553344
+    m_Localized: Pon un nombre de usuario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47842806102245376
+    m_Localized: "El nombre no podr\xE1 cambiarse despu\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 47844922841645056
+    m_Localized: Por favor, no utilices lenguaje soez
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
