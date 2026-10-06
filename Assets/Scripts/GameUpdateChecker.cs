@@ -11,6 +11,8 @@ public class GameUpdateChecker : MonoBehaviour
     private CanvasGroup _versionAvailablePanel;
     [SerializeField]
     private CanvasGroup _noInternetPanel;
+    [SerializeField]
+    private CanvasGroup _createUserPanel;
 
     [SerializeField]
     private Sprite _connectionSpr;
@@ -42,7 +44,9 @@ public class GameUpdateChecker : MonoBehaviour
             else
             {
                 LeaderboardController.Instance.LoadAllScores();
-                _menuPanel.SetVisible(true);
+
+                if(!_createUserPanel.interactable)
+                    _menuPanel.SetVisible(true);
             }
         });
     }

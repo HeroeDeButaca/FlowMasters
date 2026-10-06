@@ -103,7 +103,11 @@ public class TimesOutManager : MonoBehaviour
 
     private IEnumerator ReturnToMenuCo()
     {
+        if (PlayerData.Instance.UserData.BoardsCompleted >= 67)
+            IconUnlocker.Instance.UnlockIcon(10);
+
         PlayerData.Instance.SavePlayerData();
+        
         yield return new WaitForSeconds(1f);
         Destroy(PlayerData.Instance.gameObject);
         SceneManager.LoadScene(0);

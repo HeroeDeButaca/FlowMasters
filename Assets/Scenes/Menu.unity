@@ -7689,18 +7689,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 821752316}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &821752317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12435,9 +12423,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282626492}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1282626495
 MonoBehaviour:
@@ -19468,6 +19456,7 @@ MonoBehaviour:
   _menuPanel: {fileID: 1282626494}
   _versionAvailablePanel: {fileID: 1239086318}
   _noInternetPanel: {fileID: 469629025}
+  _createUserPanel: {fileID: 1816803525}
   _connectionSpr: {fileID: 21300000, guid: b1d9791e0d842574f8d7ec5a37b61910, type: 3}
   _noConnectionSpr: {fileID: 21300000, guid: 2e59157ead2db0345add55118900f501, type: 3}
   _connectionImage: {fileID: 650534969}

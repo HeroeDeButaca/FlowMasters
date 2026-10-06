@@ -35,8 +35,12 @@ public class IconUnlocker : MonoBehaviour
             AudioManager.Instance.PlaySFX(_iconUnlockedSfx);
             PlayerData.Instance.SavePlayerData();
 
-            IconManager.Instance?.ResetIconsPanel();
-            IconManager.Instance?.InitializeIcons();
+            if(IconManager.Instance != null)
+            {
+                IconManager.Instance.ResetIconsPanel();
+                IconManager.Instance.InitializeIcons();
+            }
+            
         }
     }
 }

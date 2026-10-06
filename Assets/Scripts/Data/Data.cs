@@ -11,6 +11,7 @@ public class Data
     public List<IconUnlocked> IconsUnlocked;
 
     public int GamesPlayed;
+    public int BoardsCompleted;
 
     public Data() { }
     public Data(string playerName)
@@ -18,6 +19,7 @@ public class Data
         PlayerId = Guid.NewGuid().ToString("N");
         PlayerName = playerName;
         IconId = 0;
+        GamesPlayed = 9;
         IconsUnlocked = new List<IconUnlocked>();
         IconsUnlocked.Add(new IconUnlocked(0, true));
     }

@@ -63,12 +63,28 @@ public class PlayerData : MonoBehaviour
 
     public void ReadUsernameInput(TMP_InputField usernameInput)
     {
-        _data = new Data(usernameInput.text);
+        if (!usernameInput.interactable)
+            return;
 
         usernameInput.interactable = false;
-        usernameInput.text = "Loading...";
 
-        StartCoroutine(CreateDataCo());
+        ProfanityFilter profanityFilter = new();
+        string username = usernameInput.text;
+        bool isNameAllowed = profanityFilter.IsNameAllowed(username);
+        Debug.Log($"Nombre permitido: {isNameAllowed}");
+
+        if (isNameAllowed)
+        {
+            _data = new Data(usernameInput.text);
+            StartCoroutine(CreateDataCo());
+        }
+        else
+        {
+            usernameInput.interactable = true;
+            // Mostrar aviso
+        }
+
+
     }
 
     private IEnumerator CreateDataCo()
@@ -81,6 +97,7 @@ public class PlayerData : MonoBehaviour
         IconManager.Instance.CheckListBoolData();
 
         yield return StartCoroutine(SavePlayerDataCo());
+        Debug.Log("Post yield");
 
         _userCreationGroup.SetVisible(false);
         _mainMenuGroup.SetVisible(true);

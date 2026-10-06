@@ -83,6 +83,7 @@ public class GameController : MonoBehaviour
 
     private void TableFilled()
     {
+        PlayerData.Instance.UserData.BoardsCompleted++;
         _gameState = GameState.LoadingMap;
         OnReset?.Invoke();
         _completedBoards++;

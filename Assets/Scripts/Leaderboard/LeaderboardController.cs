@@ -85,24 +85,29 @@ public class LeaderboardController : MonoBehaviour
                 top5 = top5.GetRange(0, TOP_SHOW);
 
             Data userData = PlayerData.Instance.UserData;
-            for (int i = 0; i < top5.Count; i++)
-            {
-                var data = top5[i];
-                //Debug.Log($"{i + 1}. {data.PlayerName} - {data.TotalPoints}");
-                _leaderboardData[modeId, i] = data;
 
-                if (i == 0)
+            if(userData != null)
+            {
+                for (int i = 0; i < top5.Count; i++)
                 {
-                    int lastScore = PlayerPrefs.GetInt("LastScore", 0);
-                    if (data.PlayerName.Equals(userData.PlayerName) && lastScore == data.TotalPoints)
-                        IconUnlocker.Instance.UnlockIcon(7);
-                }
-                else
-                {
-                    if (data.PlayerName.Equals(userData.PlayerName))
-                        IconUnlocker.Instance.UnlockIcon(9);
+                    var data = top5[i];
+                    //Debug.Log($"{i + 1}. {data.PlayerName} - {data.TotalPoints}");
+                    _leaderboardData[modeId, i] = data;
+
+                    if (i == 0)
+                    {
+                        int lastScore = PlayerPrefs.GetInt("LastScore", 0);
+                        if (data.PlayerName.Equals(userData.PlayerName) && lastScore == data.TotalPoints)
+                            IconUnlocker.Instance.UnlockIcon(7);
+                    }
+                    else
+                    {
+                        if (data.PlayerName.Equals(userData.PlayerName))
+                            IconUnlocker.Instance.UnlockIcon(9);
+                    }
                 }
             }
+            
         })
         .Catch(err =>
         {
@@ -128,7 +133,9 @@ public class LeaderboardController : MonoBehaviour
 
         if (totalDeactivatedBoxes >= _contentLeaderboard.childCount)
         {
-            _textBeFirstGO.SetActive(true);
+            if(PlayerPrefs.GetInt("IsOffline", 1) == 0)
+                _textBeFirstGO.SetActive(true);
+
             _loadingScreen.SetActive(false);
             return;
         }
@@ -150,5 +157,7 @@ public class LeaderboardController : MonoBehaviour
     {
         for (int i = 0; i < _contentLeaderboard.childCount; i++)
             _contentLeaderboard.GetChild(i).gameObject.SetActive(false);
+
+        _textBeFirstGO.SetActive(false);
     }
 }
