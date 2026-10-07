@@ -46,6 +46,12 @@ MonoBehaviour:
     m_Localized: Keep playing
     m_Metadata:
       m_Items: []
+  - m_Id: 35830116030889984
+    m_Localized: 'Cheating has been detected! Your
+
+      score will not be submitted'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

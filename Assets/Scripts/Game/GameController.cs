@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour
             }
             else if (_currentTime <= 0f)
             {
+                AntiCheat.Instance.CreateCheckpoint(CheckpointType.GameFinished);
                 _timeText.GetComponent<Animator>().SetBool("ticking", false);
                 TouchDetector.Instance.CanTouch = false;
                 _gameState = GameState.Finished;
@@ -95,8 +96,8 @@ public class GameController : MonoBehaviour
     {
         PlayerData.Instance.UserData.BoardsCompleted++;
         _gameState = GameState.LoadingMap;
-        OnReset?.Invoke();
         _completedBoards++;
+        OnReset?.Invoke();
         _completedBoardsText.text = _completedBoards.ToString("0");
 
         NodesGenerator.Instance.CreateCorrectBoard(_maxNodes);
@@ -113,5 +114,10 @@ public class GameController : MonoBehaviour
         Destroy(PlayerData.Instance.gameObject);
         AudioManager.Instance.StopBGM();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public int GetBoardsCompleted()
+    {
+        return _completedBoards;
     }
 }

@@ -12864,7 +12864,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    TotalTime: 15
+    TotalTime: 45
     TableHeight: 4
     TableWidth: 4
     NodesPerBoard: 4

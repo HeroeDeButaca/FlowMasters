@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: Continua jugant
     m_Metadata:
       m_Items: []
+  - m_Id: 35830116030889984
+    m_Localized: "S'ha detectat un frau! La\nteva puntuaci\xF3 no s'enviar\xE0"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

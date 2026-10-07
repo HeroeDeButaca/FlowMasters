@@ -17,6 +17,9 @@ public class TimesOutManager : MonoBehaviour
     private TMP_Text _completedBoardsText;
 
     [SerializeField]
+    private GameObject _cheatsDetectedTextGO;
+
+    [SerializeField]
     private Button _returnMenuButton;
 
     private const string _databaseLink = "https://flowfreelikegameleaderboard-default-rtdb.europe-west1.firebasedatabase.app/";
@@ -36,6 +39,7 @@ public class TimesOutManager : MonoBehaviour
 
     public void ShowPanel(int completedBoards)
     {
+        AntiCheat.Instance.StopAutoCheckpointCoroutine();
         _returnMenuButton.interactable = false;
         _timesOutPanel.SetVisible(true);
 
@@ -43,7 +47,11 @@ public class TimesOutManager : MonoBehaviour
         completedText = completedText.Replace("x", completedBoards.ToString("0"));
         _completedBoardsText.text = completedText;
 
-        if (PlayerPrefs.GetInt("IsOffline") == 0)
+        bool isLegit = AntiCheat.Instance.CheckIsLegitRun();
+        _completedBoardsText.gameObject.SetActive(isLegit);
+        _cheatsDetectedTextGO.SetActive(!isLegit);
+
+        if (PlayerPrefs.GetInt("IsOffline") == 0 && isLegit)
             PostPoints(completedBoards);
         else
             _returnMenuButton.interactable = true;

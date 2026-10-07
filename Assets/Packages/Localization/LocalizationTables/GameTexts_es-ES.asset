@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: "El progreso no ser\xE1 guardado ni publicado en la tabla de clasificaci\xF3n"
     m_Metadata:
       m_Items: []
+  - m_Id: 35830116030889984
+    m_Localized: "\xA1Se han detectado trampas! Tu\npuntuaci\xF3n no se registrar\xE1"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: Game.TimesOut.CompletedBoards
     m_Metadata:
       m_Items: []
+  - m_Id: 35830116030889984
+    m_Key: Game.TimesOut.CheatingDetected
+    m_Metadata:
+      m_Items: []
   - m_Id: 929416364032
     m_Key: Game.TimesOut.ReturnMenuButton
     m_Metadata:
