@@ -151,6 +151,18 @@ MonoBehaviour:
     m_Key: Menu.CreateUser.ProfanityAdvice
     m_Metadata:
       m_Items: []
+  - m_Id: 48127879967948800
+    m_Key: Menu.QuitGame.Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48129533274505216
+    m_Key: Menu.QuitGame.QuitBtn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48132191565660160
+    m_Key: Menu.QuitGame.KeepPlayingBtn
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

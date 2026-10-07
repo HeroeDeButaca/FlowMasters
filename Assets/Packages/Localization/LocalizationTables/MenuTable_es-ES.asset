@@ -156,6 +156,18 @@ MonoBehaviour:
     m_Localized: Por favor, no utilices lenguaje soez
     m_Metadata:
       m_Items: []
+  - m_Id: 48127879967948800
+    m_Localized: Salir del juego
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48129533274505216
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48132191565660160
+    m_Localized: Seguir jugando
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

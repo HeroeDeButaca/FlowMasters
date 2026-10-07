@@ -156,6 +156,18 @@ MonoBehaviour:
     m_Localized: Si us plau, no utilitzeu paraulotes
     m_Metadata:
       m_Items: []
+  - m_Id: 48127879967948800
+    m_Localized: Sortir del joc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48129533274505216
+    m_Localized: Sortir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48132191565660160
+    m_Localized: Continua jugant
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

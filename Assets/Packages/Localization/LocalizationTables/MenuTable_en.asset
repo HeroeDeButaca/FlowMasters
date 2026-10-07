@@ -158,6 +158,18 @@ MonoBehaviour:
     m_Localized: Please do not use profanity
     m_Metadata:
       m_Items: []
+  - m_Id: 48127879967948800
+    m_Localized: Quit the game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48129533274505216
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48132191565660160
+    m_Localized: Keep playing
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
